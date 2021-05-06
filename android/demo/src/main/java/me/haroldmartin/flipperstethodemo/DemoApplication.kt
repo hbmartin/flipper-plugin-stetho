@@ -11,8 +11,6 @@ import android.app.Application
 import com.facebook.flipper.android.AndroidFlipperClient
 import com.facebook.flipper.android.utils.FlipperUtils
 import com.facebook.soloader.SoLoader
-import me.haroldmartin.flipperstethodemo.BuildConfig
-
 
 class DemoApplication : Application() {
     override fun onCreate() {

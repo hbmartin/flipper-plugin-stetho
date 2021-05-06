@@ -1,8 +1,6 @@
 package me.haroldmartin.flipper.stetho
 
 import android.util.Log
-import com.facebook.flipper.core.FlipperObject
-import com.facebook.flipper.core.FlipperResponder
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 

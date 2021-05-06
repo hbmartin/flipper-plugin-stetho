@@ -1,6 +1,5 @@
 package me.haroldmartin.flipper.stetho
 
-import com.facebook.flipper.core.FlipperResponder
 import com.facebook.stetho.dumpapp.DumperContext
 import org.apache.commons.cli.BasicParser
 

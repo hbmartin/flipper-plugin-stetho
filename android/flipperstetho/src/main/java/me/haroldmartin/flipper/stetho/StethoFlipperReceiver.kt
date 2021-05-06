@@ -8,7 +8,7 @@ import com.facebook.stetho.dumpapp.DumperPlugin
 internal class StethoFlipperReceiver(
     private val plugins: List<DumperPlugin>,
     private val sink: OutputSink
-): FlipperReceiver {
+) : FlipperReceiver {
     override fun onReceive(params: FlipperObject, responder: FlipperResponder) {
         val pluginName = params.get("command") as? String
         val pluginArgs = params.get("arguments") as? String
@@ -21,7 +21,7 @@ internal class StethoFlipperReceiver(
 
         // TODO put a close() call after dump?
 
-        plugins.find { it.getName() == pluginName}?.dump(dumpContext) ?: run {
+        plugins.find { it.getName() == pluginName }?.dump(dumpContext) ?: run {
             responder.error(
                 FlipperObject.Builder()
                     .put("error", "could not find stethp plugin $pluginName")

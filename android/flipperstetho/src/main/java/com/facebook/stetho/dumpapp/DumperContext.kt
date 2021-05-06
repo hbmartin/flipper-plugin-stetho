@@ -1,8 +1,8 @@
 package com.facebook.stetho.dumpapp
 
 import org.apache.commons.cli.CommandLineParser
-import java.io.InputStream;
-import java.io.PrintStream;
+import java.io.InputStream
+import java.io.PrintStream
 
 class DumperContext(
     val stdin: InputStream,
