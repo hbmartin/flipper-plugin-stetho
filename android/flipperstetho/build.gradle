@@ -5,6 +5,7 @@ plugins {
     id 'kotlin-kapt'
     id 'org.jlleitschuh.gradle.ktlint'
     id 'io.gitlab.arturbosch.detekt'
+    id 'maven-publish'
 }
 
 android {
@@ -42,4 +43,15 @@ detekt {
     }
 }
 
-//apply plugin: "com.vanniktech.maven.publish"
+publishing {
+    repositories {
+        maven {
+            credentials {
+                username 'hmartin'
+            }
+            url = 'https://s01.oss.sonatype.org/content/repositories/releases'
+        }
+    }
+}
+
+apply plugin: "com.vanniktech.maven.publish"
