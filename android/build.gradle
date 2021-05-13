@@ -40,6 +40,12 @@ allprojects {
         google()
         mavenCentral()
     }
+
+    plugins.withId("com.vanniktech.maven.publish") {
+        mavenPublish {
+            sonatypeHost = "S01"
+        }
+    }
 }
 
 task addKtLintStyle(type: JavaExec, group: "formatting") {

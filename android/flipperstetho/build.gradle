@@ -43,15 +43,4 @@ detekt {
     }
 }
 
-publishing {
-    repositories {
-        maven {
-            credentials {
-                username 'hmartin'
-            }
-            url = 'https://s01.oss.sonatype.org/content/repositories/releases'
-        }
-    }
-}
-
 apply plugin: "com.vanniktech.maven.publish"
