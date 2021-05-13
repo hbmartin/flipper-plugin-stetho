@@ -4,7 +4,7 @@ import org.apache.commons.cli.CommandLineParser
 import java.io.InputStream
 import java.io.PrintStream
 
-class DumperContext(
+open class DumperContext(
     val stdin: InputStream,
     val stdout: PrintStream,
     val stderr: PrintStream,
