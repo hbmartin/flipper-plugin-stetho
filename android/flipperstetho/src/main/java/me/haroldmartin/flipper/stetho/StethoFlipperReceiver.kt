@@ -19,12 +19,10 @@ internal class StethoFlipperReceiver(
             args = pluginArgs?.split(" ") ?: listOf()
         )
 
-        // TODO put a close() call after dump?
-
         plugins.find { it.getName() == pluginName }?.dump(dumpContext) ?: run {
             responder.error(
                 FlipperObject.Builder()
-                    .put("error", "could not find stethp plugin $pluginName")
+                    .put("error", "could not find stetho plugin $pluginName")
                     .build()
             )
         }

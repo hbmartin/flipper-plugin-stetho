@@ -1,6 +1,5 @@
 package me.haroldmartin.flipper.stetho
 
-import android.util.Log
 import java.io.ByteArrayOutputStream
 import java.io.PrintStream
 
@@ -17,15 +16,8 @@ private class PluginOutputStream(
     private val sink: OutputSink
 ) : ByteArrayOutputStream() {
     override fun flush() {
-        Log.e("POS", "flush: ${toString()}")
-
         val bufferedString = toString()
         reset()
         sink.appendOutput(pluginName, bufferedString)
-    }
-
-    override fun close() {
-        super.close()
-        Log.e("POS", "close")
     }
 }
