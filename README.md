@@ -13,7 +13,7 @@ Install in your build.gradle:
 
 ```
 dependencies {
-  implementation 'io.github.hbmartin:flipperstetho:0.1.1'
+  implementation 'io.github.hbmartin:flipperstetho:0.2.0'
 }
 ```
 
@@ -21,6 +21,10 @@ dependencies {
 ## Usage
 
 Instantiate `StethoFlipperPlugin` with a list of the stetho/dumper plugins to expose. Then add that plugin to Flipper. See the demo app.
+
+```
+client.addPlugin(StethoFlipperPlugin(dumperPluginsProvider.get()))
+```
 
 ## Contributing
 
