@@ -11,11 +11,11 @@ internal object PluginDumpContext {
     ): DumperContext {
         val printStream = PluginPrintStream(pluginName = pluginName, sink = sink)
         return DumperContext(
-            stdin = PluginInputStream(),
-            stdout = printStream,
-            stderr = printStream,
-            parser = BasicParser(),
-            argsAsList = args
+            PluginInputStream(),
+            printStream,
+            printStream,
+            BasicParser(),
+            args
         )
     }
 }

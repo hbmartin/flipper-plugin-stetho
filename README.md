@@ -22,6 +22,11 @@ dependencies {
 
 Instantiate `StethoFlipperPlugin` with a list of the stetho/dumper plugins to expose. Then add that plugin to Flipper. See the demo app.
 
+## Contributing
+
+* [PRs](https://github.com/hbmartin/flipper-plugin-stetho/pulls) and [bug reports / feature requests](https://github.com/hbmartin/flipper-plugin-stetho/issues) are all welcome!
+* This project is linted with [ktlint](https://github.com/pinterest/ktlint) via [ktlint-gradle](https://github.com/JLLeitschuh/ktlint-gradle/tags) and performs static analysis with [detekt](https://github.com/detekt/detekt)
+* Treat other people with helpfulness, gratitude, and consideration! See the [Android SE CoC](https://android.stackexchange.com/conduct)
 
 ## License
 

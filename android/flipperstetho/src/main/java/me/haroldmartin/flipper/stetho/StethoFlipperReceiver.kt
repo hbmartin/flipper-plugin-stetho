@@ -6,7 +6,7 @@ import com.facebook.flipper.core.FlipperResponder
 import com.facebook.stetho.dumpapp.DumperPlugin
 
 internal class StethoFlipperReceiver(
-    private val plugins: List<DumperPlugin>,
+    private val plugins: Iterable<DumperPlugin>,
     private val sink: OutputSink
 ) : FlipperReceiver {
     override fun onReceive(params: FlipperObject, responder: FlipperResponder) {

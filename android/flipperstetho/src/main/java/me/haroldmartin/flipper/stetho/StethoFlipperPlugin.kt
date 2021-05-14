@@ -6,7 +6,7 @@ import com.facebook.flipper.core.FlipperObject
 import com.facebook.flipper.core.FlipperPlugin
 import com.facebook.stetho.dumpapp.DumperPlugin
 
-class StethoFlipperPlugin(private val plugins: List<DumperPlugin>) : FlipperPlugin, OutputSink {
+class StethoFlipperPlugin(private val plugins: Iterable<DumperPlugin>) : FlipperPlugin, OutputSink {
     private var connection: FlipperConnection? = null
 
     override fun getId() = "stetho"
