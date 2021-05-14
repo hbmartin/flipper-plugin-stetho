@@ -1,4 +1,4 @@
-# Extract ProtobufJS Messages from Generated Java Classeses
+# Flipper Plugin to Replace Stetho
 
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.hbmartin/flipper-plugin-stetho?color=6D3DEE)](https://repo.maven.apache.org/maven2/io/github/hbmartin/flipper-plugin-stetho/)
 [![reviewdog badge](https://github.com/hbmartin/flipper-plugin-stetho/actions/workflows/reviewdog.yml/badge.svg)](https://github.com/hbmartin/flipper-plugin-stetho/actions/workflows/reviewdog.yml)
@@ -23,6 +23,8 @@ dependencies {
 Instantiate `StethoFlipperPlugin` with a list of the stetho/dumper plugins to expose. Then add that plugin to Flipper. See the demo app.
 
 ```
+client.addPlugin(StethoFlipperPlugin(listOf(MyDumperPlugin())))
+OR
 client.addPlugin(StethoFlipperPlugin(dumperPluginsProvider.get()))
 ```
 
