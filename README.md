@@ -1,6 +1,6 @@
 # Flipper Plugin to Replace Stetho
 
-[![Maven Central](https://img.shields.io/maven-central/v/io.github.hbmartin/flipper-plugin-stetho?color=6D3DEE)](https://repo.maven.apache.org/maven2/io/github/hbmartin/flipper-plugin-stetho/)
+[![Maven Central](https://img.shields.io/maven-central/v/io.github.hbmartin/flipper-stetho-plugin?color=6D3DEE)](https://repo.maven.apache.org/maven2/io/github/hbmartin/flipper-plugin-stetho/)
 [![reviewdog badge](https://github.com/hbmartin/flipper-plugin-stetho/actions/workflows/reviewdog.yml/badge.svg)](https://github.com/hbmartin/flipper-plugin-stetho/actions/workflows/reviewdog.yml)
 [![CodeFactor](https://www.codefactor.io/repository/github/hbmartin/flipper-plugin-stetho/badge)](https://www.codefactor.io/repository/github/hbmartin/flipper-plugin-stetho)
 [![GitHub issues](https://img.shields.io/github/issues/hbmartin/flipper-plugin-stetho)](https://github.com/hbmartin/flipper-plugin-stetho/issues)
@@ -13,7 +13,7 @@ Install in your build.gradle:
 
 ```
 dependencies {
-  implementation 'io.github.hbmartin:flipperstetho:0.2.0'
+  implementation 'io.github.hbmartin:flipper-stetho-plugin:0.2.0'
 }
 ```
 
