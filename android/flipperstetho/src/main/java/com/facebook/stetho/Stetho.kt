@@ -4,6 +4,7 @@ import android.content.Context
 import com.facebook.stetho.dumpapp.DumperPlugin
 
 class Stetho {
+    @Suppress("UnusedPrivateMember")
     class DefaultDumperPluginsBuilder(context: Context) {
         private val pluginsList = mutableListOf<DumperPlugin>()
 
