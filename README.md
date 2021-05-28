@@ -1,8 +1,9 @@
 # Flipper Plugin to Replace Stetho
 
+[![npm](https://img.shields.io/npm/v/flipper-plugin-stetho?color=%23FEE933)](https://www.npmjs.com/package/flipper-plugin-stetho)
 [![Maven Central](https://img.shields.io/maven-central/v/io.github.hbmartin/flipper-stetho-plugin?color=6D3DEE)](https://repo.maven.apache.org/maven2/io/github/hbmartin/flipper-stetho-plugin/)
-[![reviewdog badge](https://github.com/hbmartin/flipper-plugin-stetho/actions/workflows/reviewdog.yml/badge.svg)](https://github.com/hbmartin/flipper-plugin-stetho/actions/workflows/reviewdog.yml)
-[![CodeFactor](https://www.codefactor.io/repository/github/hbmartin/flipper-plugin-stetho/badge)](https://www.codefactor.io/repository/github/hbmartin/flipper-plugin-stetho)
+[![CI](https://github.com/hbmartin/flipper-plugin-stetho/actions/workflows/main.yml/badge.svg)](https://github.com/hbmartin/flipper-plugin-stetho/actions/workflows/main.yml)[![CodeFactor](https://www.codefactor.io/repository/github/hbmartin/flipper-plugin-stetho/badge)](https://www.codefactor.io/repository/github/hbmartin/flipper-plugin-stetho)
+[![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=hbmartin_flipper-plugin-stetho&metric=sqale_rating)](https://sonarcloud.io/dashboard?id=hbmartin_flipper-plugin-stetho)
 [![GitHub issues](https://img.shields.io/github/issues/hbmartin/flipper-plugin-stetho)](https://github.com/hbmartin/flipper-plugin-stetho/issues)
 
 Drop in replacement for Stetho to expose dumper plugins in Flipper
