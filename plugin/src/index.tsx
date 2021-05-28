@@ -1,10 +1,17 @@
+/**
+ * Copyright (c) 2021 Harold Martin.
+ *
+ * This source code is licensed under the MIT license found in the
+ * LICENSE file in the root directory of this source tree.
+ */
+
 import React, {ChangeEvent, KeyboardEvent} from 'react';
 import {createState, Layout, PluginClient, styled, usePlugin, useValue} from 'flipper-plugin';
 import {Button, Card, Input, List, Typography} from "antd";
-import {Events, Methods} from './types'
+import {DumperPlugin, Events, Methods} from './types'
 
 export function plugin(client: PluginClient<Events, Methods>) {
-    const plugins = createState<Plugin[]>([], {persist: 'data'});
+    const plugins = createState<DumperPlugin[]>([], {persist: 'data'});
 
     client.onMessage('pluginList', (newData) => {
         plugins.set(newData.map(pid => {
@@ -20,7 +27,7 @@ export function plugin(client: PluginClient<Events, Methods>) {
     });
 
     const executePlugin = (id: string) => {
-        let plugin = plugins.get().find(el => el.id == id);
+        const plugin = plugins.get().find(el => el.id == id);
         if (plugin == undefined) return;
         updatePlugin(id, (plugin) => {
             plugin.output = "";
@@ -32,9 +39,9 @@ export function plugin(client: PluginClient<Events, Methods>) {
         });
     };
 
-    const updatePlugin = (id: string, recipe: (plugin: Plugin) => Plugin) => {
+    const updatePlugin = (id: string, recipe: (plugin: DumperPlugin) => DumperPlugin) => {
         plugins.update((draft) => {
-            let pluginIndex = draft.findIndex(plugin => plugin.id == id);
+            const pluginIndex = draft.findIndex(plugin => plugin.id == id);
             if (pluginIndex != -1) {
                 draft[pluginIndex] = recipe(draft[pluginIndex]);
             }
@@ -76,7 +83,7 @@ export function Component() {
     code { width: 100%; display: inline-block; margin: 0; white-space: pre; }
     `;
 
-    let renderOutput = (item: Plugin) => {
+    const renderOutput = (item: DumperPlugin) => {
         if (item.output != undefined) {
             return <WideCodeText code>{item.output}</WideCodeText>;
         }
